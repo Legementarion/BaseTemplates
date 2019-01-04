@@ -1,0 +1,47 @@
+<template format="4"
+        revision="1"
+        name="MVP Template Activity"
+        description="Creates a new MVP classes - Presenter, Activity, Contract and DataSource between the two">
+ 
+    <category value="Other"/>
+ 
+    <parameter id="className"
+        name="Functionality Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MvpFunction"
+        help="The name of the functionality that requires MVP views"/>
+
+	<parameter
+		id="folderName"
+		name="Folder Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="demo"
+		help="Activity root folder" />
+
+	<parameter
+        id="includeRepositoryClasses"
+        name="Create repository classes?"
+        type="boolean"
+        default="false"
+        help="Generate a repository classes for the activity" />
+
+<parameter
+        id="includeBasClasses"
+        name="Create base classes?"
+        type="boolean"
+        default="false"
+        help="Generate a base classes for the project" />
+
+	<parameter
+        id="includeLayout"
+        name="Create layout XML?"
+        type="boolean"
+        default="true"
+        help="Generate a layout XML for the fragment" />
+ 
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+ 
+</template>
